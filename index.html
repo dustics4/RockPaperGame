@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //Function getComputerChoice, will have to have an array with Rock, Paper , Scissors.
+        //This fucntion will have to pick a random string from the array
+        // 
+
+        //Function PlayRound
+        // playerSelection is Rock , how to know what  the computer selection will be if its random
+        // If player selection is == computerSelection , it is a draw
+        // If player selection is 'Rock' and computerSelection is 'Paper' = Computer wins
+        // If player selection is 'Rock' and computerSelection is 'Scissors' = Player wins
+        function getComputerChoice(){
+            let computerArray = ['Rock' , 'Paper' , 'Scissors'];
+            let pickRandom = computerArray[Math.floor(Math.random()* computerArray.length)]
+            return pickRandom;
+        }
+
+        function playRound(playerSelection, computerSelection) {
+        // your code here!
+            if (playerSelection == 'Rock' && computerSelection == 'Scissors'){
+                return "You Win! Rock beats Scissors";
+            } else if (playerSelection == 'Rock' && computerSelection =='Rock'){
+                return "Draw!";
+            } else if (playerSelection == 'Rock' && computerSelection =='Paper'){
+                return "You Lose! Paper beats Rock";
+            }
+            else null
+        }
+        
+        const playerSelection = "rock";
+        const computerSelection = getComputerChoice();
+         
+        
+        console.log(playRound(playerSelection, computerSelection));
+    </script>
+</body>
+</html>
