@@ -19,6 +19,13 @@
         // If player selection is == computerSelection , it is a draw
         // If player selection is 'Rock' and computerSelection is 'Paper' = Computer wins
         // If player selection is 'Rock' and computerSelection is 'Scissors' = Player wins
+        let playscore = 0;
+        let computerscore = 0;
+
+        function game(){
+
+        }
+
         function getComputerChoice(){
             let computerArray = ['Rock' , 'Paper' , 'Scissors'];
             let pickRandom = computerArray[Math.floor(Math.random()* computerArray.length)]
@@ -29,19 +36,20 @@
         // your code here!
             if (playerSelection === 'Rock' && computerSelection === 'Scissors'){
                 return "You Win! Rock beats Scissors";
+                playerscore++;
 
             } else if (playerSelection === 'Rock' && computerSelection ==='Rock'){
                 return "Draw!";
 
             } else if (playerSelection === 'Rock' && computerSelection ==='Paper'){
                 return "You Lose! Paper beats Rock";
-
+                computerscore++;
             } else if (playerSelection === 'Scissors' && computerSelection ==='Paper'){
                 return "You Win! Scissors beats Paper";
- 
+                playerscore++;
             } else if (playerSelection === 'Scissors' && computerSelection ==='Rock'){
                 return "You Lose! Rock beats Scissors";
-
+                computerscore++;
             } else if (playerSelection === 'Scissors' && computerSelection ==='Scissors'){
                 return "Draw!";
 
@@ -50,9 +58,10 @@
 
             } else if (playerSelection === 'Paper' && computerSelection ==='Rock'){
                 return "You Win! Paper beats Rock";
-
+                playerscore++;
             } else if (playerSelection === 'Paper' && computerSelection ==='Scissors'){
                 return "You Lose! Scissors beats Paper";
+                computerscore++;
             }
 
             else null
