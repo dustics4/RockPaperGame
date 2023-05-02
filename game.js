@@ -9,6 +9,7 @@
         // If player selection is 'Rock' and computerSelection is 'Scissors' = Player wins
         let playerscore = 0;
         let computerscore = 0;
+        //  Randomises the array. Picks Rock or paper or scissors
 
         function getComputerChoice(){
             let computerArray = ['Rock' , 'Paper' , 'Scissors'];
@@ -62,8 +63,8 @@
             }
 
             
-
-            console.log(playRound(playerSelection, computerSelection))
+            // plays the functions, and prints out what output/result.
+            return console.log(playRound(playerSelection, computerSelection))
             
         }
 
@@ -73,6 +74,7 @@
         const computerSelection = getComputerChoice();
          
         
-        console.log(game);
+        game();
+        //Shows player score and computer score.
         console.log("This is the player total :", playerscore);
         console.log("This is the computer score :", computerscore);
