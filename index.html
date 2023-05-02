@@ -22,10 +22,6 @@
         let playscore = 0;
         let computerscore = 0;
 
-        function game(){
-
-        }
-
         function getComputerChoice(){
             let computerArray = ['Rock' , 'Paper' , 'Scissors'];
             let pickRandom = computerArray[Math.floor(Math.random()* computerArray.length)]
@@ -82,7 +78,7 @@
         const computerSelection = getComputerChoice();
          
         
-        console.log(playRound(playerSelection, computerSelection));
+        console.log(game(playerSelection, computerSelection));
         console.log("This is the player total :", sumPlayer);
         console.log("This is the computer score :", sumComputer);
 
