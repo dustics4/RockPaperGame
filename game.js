@@ -7,15 +7,38 @@
         // If player selection is == computerSelection , it is a draw
         // If player selection is 'Rock' and computerSelection is 'Paper' = Computer wins
         // If player selection is 'Rock' and computerSelection is 'Scissors' = Player wins
+
         let playerscore = 0;
         let computerscore = 0;
         //  Randomises the array. Picks Rock or paper or scissors
+
+        const btnRock = document.querySelector('#btnRock');
+        const btnPaper = document.querySelector('#btnPaper');
+        const btnScissors = document.querySelector('#btnScissors');
+
+        btnRock.addEventListener('click', () => {
+            const rock = "rock";
+            console.log(rock);
+            playRound();
+        })
+
+        btnPaper.addEventListener('click', () => {
+            const paper = "paper";
+            console.log(paper);
+        })
+
+        btnScissors.addEventListener('click' , () => {
+            const scissors = "scissors";
+            console.log(scissors);
+        })
 
         function getComputerChoice(){
             let computerArray = ['Rock' , 'Paper' , 'Scissors'];
             let pickRandom = computerArray[Math.floor(Math.random()* computerArray.length)]
             return pickRandom;
         }
+
+
 
         function game() {
                 // Function that plays rock paper scissors. Adds a point each to player or computer if they won.
@@ -70,7 +93,7 @@
 
         
         
-        const playerSelection = prompt("Game Starts! Pick your 'Rock' , 'Paper or 'Scissors : ");
+        //const playerSelection = prompt("Game Starts! Pick your 'Rock' , 'Paper or 'Scissors : ");
         const computerSelection = getComputerChoice();
          
         
